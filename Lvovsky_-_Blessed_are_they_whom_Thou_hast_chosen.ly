@@ -99,7 +99,7 @@ barMusic = \relative c {
     e2 r4 a | a( g2 f4 | f) e e( d) | a'2 g | f r2 |
 
     % 23
-    r2 r4 fis | g2( b4) g | fis1 | g2( b4) g | fis1 | g2( b4) b |
+    r2 r4 fis | g2( bes4) g | fis1 | g2( b4) g | fis1 | g2( b4) b |
     % 29
     d1~ | d2 r4 d, | g2( f4) bes! | a2( g2) | f e | d1 |
 
