@@ -29,7 +29,7 @@ global = {
 
 tenIMusic = \relative c' {
     %  1
-    d1 | d4(-> cis) cis2 | d4( e f g) | d2 d | cis2 b4 cis | d2. r4 |
+    d1 | d4(-> cis) cis2 | d4( e f d) | d2 d | cis2 b4 cis | d2. r4 |
     %  7
     f1 | f4( e) e2 | f4( g a f) | f2 f | e d4 e |
 
@@ -41,7 +41,7 @@ tenIMusic = \relative c' {
     % 23
     r1 | r | r4 d d d | d2. d4 | d1 | g2. <g e>4 |
     % 29
-    <a fis>1~\ff | <a fis>2 r4 d,\pp | bes'!2( a4) g | g( f2 g4) | g4( f2) cis4 | d1~ |
+    <a fis>1~\ff | <a fis>2 r4 d,\pp | bes'!2( a4) g | g( f2 e4) | e( d2) cis4 | d1~ |
 
     % 35
     d~ | d~ | d~ | d\pp \bar "||" d2 d | d4(-> cis) cis2 | d4( e f d | d2) d |
@@ -49,7 +49,7 @@ tenIMusic = \relative c' {
     % 43
     cis2( b4 cis4) | d2. r4 | f2 f | f4( e) e2 | f4( g a f | f2) f |
     % 49
-    g2( d4 e) | f2. r4 | f2 f | e e | e( d4 f | e2) e4( d) |
+    e2( d4 e) | f2. r4 | f2 f | e e | e( d4 f | e2) e4( d) |
 
     % 55
     c2( b) | c r4 cis( | d e cis d | b cis a) d | d( cis b cis) |
