@@ -57,6 +57,34 @@ tenIMusic = \relative c' {
     d1~ | d~ | d~ | d~ | d\fermata \bar "|."
 }
 
+tenILyrics = \lyricmode {
+    %  1
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    %  7
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 12
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 18
+    при -- ял е -- си \skip1 \skip1 \skip1
+
+    % 23
+    пeм -- ять их \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 29
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 35
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 43
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 49
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 55
+    \skip1 \skip1 Ал -- ли -- луи -- а
+}
+
 tenIIMusic = \relative c {
     %  1
     d4( e f g) | a2 a | a1 | d2( c4) bes | bes( a) a g | f2. r4 |
@@ -136,6 +164,36 @@ barMusic = \relative c {
     f2 f4 f | g2( d4 e) | fis1~ | fis~ | fis \bar "|."
 }
 
+barLyrics = \lyricmode {
+    %  1
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    %  7
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 12
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 18
+    при -- ял е -- си \skip1 \skip1 \skip1
+
+    % 23
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 29
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 35
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 43
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 49
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 55
+    \skip1 \skip1 \skip1 \skip1 \skip1
+    % 60
+    \skip1 \skip1 \skip1 \skip1 \skip1
+}
+
 bMusic = \relative c {
     \arpeggioBracket
     %  1
@@ -167,6 +225,34 @@ bMusic = \relative c {
     <d d,>~\arpeggio | <d d,>~ | <d d,>~ | <d d,>~ | <d d,> \bar "|."
 }
 
+bLyrics = \lyricmode {
+    %  1
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    %  7
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 12
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 18
+    при -- ял е -- си \skip1 \skip1 \skip1 и
+
+    % 23
+    пeм -- ять их "в род" и род, пeм -- ять их "в род" и
+    % 29
+    \skip1 и пeм -- ять их "в род," пeм -- ять их "в род."
+
+    % 35
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 43
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    % 49
+    \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+
+    % 55
+    \skip1 \skip1 Ал -- ли -- луи -- а
+}
+
 \score {
   \new ChoirStaff <<
     \new Staff = "tenors" \with {
@@ -179,6 +265,7 @@ bMusic = \relative c {
       \new Voice = "Tenor II" { \voiceTwo \tenIIMusic }
     >>
 
+    \new Lyrics \with { alignAboveContext = "tenors" } \lyricsto "Tenor I" { \tenILyrics }
     \new Lyrics \lyricsto "Tenor II" { \tenIILyrics }
 
     \new Staff = "basses" \with {
@@ -190,6 +277,9 @@ bMusic = \relative c {
       \new Voice = "Baritone" { \voiceOne \barMusic }
       \new Voice = "Bass" { \voiceTwo \bMusic }
     >>
+
+    \new Lyrics \with { alignAboveContext = "basses" } \lyricsto "Baritone" { \barLyrics }
+    \new Lyrics \lyricsto "Bass" { \bLyrics }
   >>
 
   \layout {}
