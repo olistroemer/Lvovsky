@@ -29,7 +29,7 @@ global = {
 
 tenIMusic = \relative c' {
     %  1
-    d1 | d4( cis) cis2 | d4( e f g) | d2 d | cis2 b4 cis | d2. r4 |
+    d1 | d4(-> cis) cis2 | d4( e f g) | d2 d | cis2 b4 cis | d2. r4 |
     %  7
     f1 | f4( e) e2 | f4( g a f) | f2 f | e d4 e |
 
@@ -41,10 +41,10 @@ tenIMusic = \relative c' {
     % 23
     r1 | r | r4 d d d | d2. d4 | d1 | g2. <g e>4 |
     % 29
-    <a fis>1~ | <a fis>2 r4 d, | bes'!2( a4) g | g( f2 g4) | g4( f2) cis4 | d1~ |
+    <a fis>1~\ff | <a fis>2 r4 d,\pp | bes'!2( a4) g | g( f2 g4) | g4( f2) cis4 | d1~ |
 
     % 35
-    d~ | d~ | d~ | d \bar "||" d2 d | d4( cis) cis2 | d4( e f d | d2) d |
+    d~ | d~ | d~ | d\pp \bar "||" d2 d | d4(-> cis) cis2 | d4( e f d | d2) d |
 
     % 43
     cis2( b4 cis4) | d2. r4 | f2 f | f4( e) e2 | f4( g a f | f2) f |
@@ -54,17 +54,17 @@ tenIMusic = \relative c' {
     % 55
     c2( b) | c r4 cis( | d e cis d | b cis a) d | d( cis b cis) |
     % 60
-    d1~ | d~ | d~ | d~ | d \bar "|."
+    d1~ | d~ | d~ | d~ | d\fermata \bar "|."
 }
 
 tenIIMusic = \relative c {
     %  1
     d4( e f g) | a2 a | a1 | d2( c4) bes | bes( a) a g | f2. r4 |
     %  7
-    f4( g a bes) | c2 c | c1 | f2( e4 d) | d( c) c bes |
+    f4( g a bes) | c2 c | c1 | f2( e4) d | d( c) c bes |
 
     % 12
-    a2. r4 | f( f) a( b) | c2( b) | c4( cis) d2 | c? c4( b) | b( a2) gis4 |
+    a2. r4 | f( g) a( b) | c2( b) | c4( cis) d2 | c? c4( b) | b( a2) gis4 |
     % 18
     a2 a | a1( | a1) | a2 a | a r |
 
@@ -84,7 +84,26 @@ tenIIMusic = \relative c {
     % 55
     b( a2 gis4) | a2 a( | a1) | a | a |
     % 60
-    a2 a4 a | bes2( d4 bes) | a2 a4 c | b2( bes) | a1 \bar "|."
+    a2 a4 a | bes2( d4 bes) | a2 a4\< c | b2(\> bes) | a1\! \bar "|."
+}
+
+tenIILyrics = \lyricmode {
+    Бла -- же -- ни, Бла -- же -- ни, я -- же из -- брал
+    Бла -- же -- ни, Бла -- же -- ни, я -- же из --
+
+    брал и при -- ял при -- ял е -- си Го -- спо -- ди,
+    при -- ял Го -- спо -- ди!
+
+    И пeм -- ять их "в род" и род, "в род" и
+    род, и пeм -- ять их "в род" и род
+
+    "в род" и род. Ал -- ли -- луи -- а, Ал -- ли --
+
+    луи -- а, Ал -- ли -- луи -- а, Ал -- ли --
+    луи -- а, Ал -- ли -- луи -- а, Ал -- ли --
+
+    луи -- а, Ал -- ли -- луи --
+    а, Ал -- ли -- луи -- а, Ал -- ли -- луи -- а.
 }
 
 barMusic = \relative c {
@@ -150,8 +169,6 @@ bMusic = \relative c {
 
 \score {
   \new ChoirStaff <<
-    %\new Dynamics { \global \dynamics }
-
     \new Staff = "tenors" \with {
         \consists "Merge_rests_engraver"
     }
@@ -162,7 +179,7 @@ bMusic = \relative c {
       \new Voice = "Tenor II" { \voiceTwo \tenIIMusic }
     >>
 
-    %\new Lyrics \lyricsto "sopranos" { \wordsA \wordsB }
+    \new Lyrics \lyricsto "Tenor II" { \tenIILyrics }
 
     \new Staff = "basses" \with {
         \consists "Merge_rests_engraver"
