@@ -14,7 +14,7 @@
 % Господи!
 % И память их
 % в род и род.
-% Аллилуиа.
+% Аллилуйя.
 
 % Blaženi jaže izbral i prijal esi,
 % Gospodi!
@@ -23,7 +23,7 @@
 % Alliluia.
 
 global = {
-  \key f \major
+  \key d \minor
   \time 4/4
 }
 
@@ -69,7 +69,7 @@ tenILyrics = \lyricmode {
     при -- ял е -- си \skip1 \skip1 \skip1
 
     % 23
-    пeм -- ять их \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
+    пам -- ять их \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
     % 29
     \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
 
@@ -82,7 +82,7 @@ tenILyrics = \lyricmode {
     \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
 
     % 55
-    \skip1 \skip1 Ал -- ли -- луи -- а
+    \skip1 \skip1 Ал -- ли -- луй -- я
 }
 
 tenIIMusic = \relative c {
@@ -116,22 +116,41 @@ tenIIMusic = \relative c {
 }
 
 tenIILyrics = \lyricmode {
-    Бла -- же -- ни, Бла -- же -- ни, я -- же из -- брал
-    Бла -- же -- ни, Бла -- же -- ни, я -- же из --
+    Бла -- же -- ни, бла -- же -- ни я -- же из -- брал,
+    бла -- же -- ни, бла -- же -- ни я -- же из --
 
-    брал и при -- ял при -- ял е -- си Го -- спо -- ди,
+    брал и при -- ял при -- ял е -- си, Го -- спо -- ди,
     при -- ял Го -- спо -- ди!
 
-    И пeм -- ять их "в род" и род, "в род" и
-    род, и пeм -- ять их "в род" и род
+    И пам -- ять их "в род" и род, "в род" и
+    род, и пам -- ять их "в род" и род
 
-    "в род" и род. Ал -- ли -- луи -- а, Ал -- ли --
+    "в род" и род. Ал -- ли -- луй -- я, Ал -- ли --
 
-    луи -- а, Ал -- ли -- луи -- а, Ал -- ли --
-    луи -- а, Ал -- ли -- луи -- а, Ал -- ли --
+    луй -- я, Ал -- ли -- луй -- я, Ал -- ли --
+    луй -- я, Ал -- ли -- луй -- я, Ал -- ли --
 
-    луи -- а, Ал -- ли -- луи --
-    а, Ал -- ли -- луи -- а, Ал -- ли -- луи -- а.
+    луй -- я, Ал -- ли -- луй --
+    я, Ал -- ли -- луй -- я, Ал -- ли -- луй -- я.
+}
+
+tenIILyricsLat = \lyricmode {
+    Bla -- že -- ni, bla -- že -- ni ja -- že iz -- bral,
+    bla -- že -- ni, bla -- že -- ni ja -- že iz --
+
+    bral i pri -- jal pri -- jal e -- si, Go -- spo -- di,
+    pri -- jal Go -- spo -- di!
+
+    I pam -- jatʹ ih "v rod" i rod, "v rod" i
+    rod, i pam -- jatʹ ih "v rod" i rod
+
+    "v rod" i rod. Al -- li -- lu -- ia. Al -- li --
+
+    lu -- ia, Al -- li -- lu -- ia, Al -- li --
+    lu -- ia, Al -- li -- lu -- ia, Al -- li --
+
+    lu -- ia, Al -- li -- lu --
+    ia, Al -- li -- lu -- ia, Al -- li -- lu -- ia.
 }
 
 barMusic = \relative c {
@@ -237,9 +256,9 @@ bLyrics = \lyricmode {
     при -- ял е -- си \skip1 \skip1 \skip1 и
 
     % 23
-    пeм -- ять их "в род" и род, пeм -- ять их "в род" и
+    пам -- ять их "в род" и род, пам -- ять их "в род" и
     % 29
-    \skip1 и пeм -- ять их "в род," пeм -- ять их "в род."
+    \skip1 и пам -- ять их "в род," пам -- ять их "в род."
 
     % 35
     \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
@@ -250,7 +269,7 @@ bLyrics = \lyricmode {
     \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
 
     % 55
-    \skip1 \skip1 Ал -- ли -- луи -- а
+    \skip1 \skip1 Ал -- ли -- луй -- я
 }
 
 \score {
@@ -282,8 +301,7 @@ bLyrics = \lyricmode {
     \new Lyrics \lyricsto "Bass" { \bLyrics }
   >>
 
-  \layout {}
-  %\midi {
-  %  \tempo 4 = 55
-  %}
+  \layout {
+    indent = 0
+  }
 }
